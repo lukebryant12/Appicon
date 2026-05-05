@@ -1,6 +1,6 @@
 {
   "name": "Staff Sign In",
-  "short_name": "Sign In",
+  "short_name": "Rosters",
   "start_url": "https://lukebryant12.github.io/Appicon/",
   "scope": "https://lukebryant12.github.io/Appicon/",
   "display": "standalone",
