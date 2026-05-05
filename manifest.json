@@ -1,15 +1,17 @@
 {
   "name": "Staff Sign In",
   "short_name": "Sign In",
-  "start_url": "index.html",
+  "start_url": "https://lukebryant12.github.io/Appicon/",
+  "scope": "https://lukebryant12.github.io/Appicon/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#62a800",
   "icons": [
     {
-      "src": "staff_sign_in_app_icon_512.png",
+      "src": "https://lukebryant12.github.io/Appicon/staff_sign_in_app_icon_512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }
