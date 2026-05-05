@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Staff Sign In</title>
+  <title>Gwendolyn Ops</title>
 
   <link rel="icon" href="https://lukebryant12.github.io/Appicon/staff_sign_in_app_icon_512.png">
-<link rel="apple-touch-icon" href="https://lukebryant12.github.io/Appicon/staff_sign_in_app_icon_512.png">
-<link rel="manifest" href="https://lukebryant12.github.io/Appicon/manifest.json">
-<meta name="theme-color" content="#62a800">
+  <link rel="apple-touch-icon" href="https://lukebryant12.github.io/Appicon/staff_sign_in_app_icon_512.png">
+  <link rel="manifest" href="https://lukebryant12.github.io/Appicon/manifest.json">
+  <meta name="theme-color" content="#62a800">
 
   <style>
     html, body {
@@ -15,6 +15,7 @@
       height: 100%;
       overflow: hidden;
     }
+
     iframe {
       border: none;
       width: 100%;
@@ -22,9 +23,23 @@
     }
   </style>
 </head>
+
 <body>
 
-<iframe src="https://script.google.com/macros/s/AKfycbxnPiIN1A5K8jJupCkIG9b2GIuSLO9sPDNuQ73ialQ0E6fqeuUzsdWC-QOJYrO7FLtL/exec"></iframe>
+<iframe id="appFrame"></iframe>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const house = params.get("house");
+
+  let appUrl = "https://script.google.com/macros/s/AKfycbxnPiIN1A5K8jJupCkIG9b2GIuSLO9sPDNuQ73ialQ0E6fqeuUzsdWC-QOJYrO7FLtL/exec";
+
+  if (house) {
+    appUrl += "?house=" + encodeURIComponent(house);
+  }
+
+  document.getElementById("appFrame").src = appUrl;
+</script>
 
 </body>
 </html>
