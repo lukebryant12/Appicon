@@ -1,19 +1,19 @@
 {
   "name": "Gwendolyn Ops",
   "short_name": "Rosters",
-  "start_url": "https://lukebryant12.github.io/Appicon/",
-  "scope": "https://lukebryant12.github.io/Appicon/",
+  "start_url": "https://gwendolynops.github.io/portal/",
+  "scope": "https://gwendolynops.github.io/portal/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#62a800",
   "icons": [
     {
-      "src": "https://lukebryant12.github.io/Appicon/staff_sign_in_app_icon_512.png",
+      "src": "https://gwendolynops.github.io/portal//staff_sign_in_app_icon_512.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "https://lukebryant12.github.io/Appicon/staff_sign_in_app_icon_512.png",
+      "src": "https://gwendolynops.github.io/portal/staff_sign_in_app_icon_512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
