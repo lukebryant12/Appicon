@@ -1,6 +1,6 @@
 {
   "name": "GwenConnect Workforce",
-  "short_name": "Gwen Connect",
+  "short_name": "ADMIN",
   "start_url": "https://gwendolynops.github.io/Portal/",
   "scope": "https://gwendolynops.github.io/Portal/",
   "display": "standalone",
