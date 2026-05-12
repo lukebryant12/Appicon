@@ -1,24 +1,19 @@
-<!DOCTYPE html>
-<html>
 <head>
   <meta charset="UTF-8">
-  <title>GwenConnect Participants</title>
+  <title>Staff Sign In</title>
+  
+<link rel="icon" href="https://gwendolynops.github.io/Portal/staff_sign_in_app_icon_512.png">
+<link rel="apple-touch-icon" href="https://gwendolynops.github.io/Portal/staff_sign_in_app_icon_512.png">
+<link rel="manifest" href="https://gwendolynops.github.io/Portal/manifest.json">
+<meta name="theme-color" content="#62a800">
 
-  <link rel="icon" href="https://raw.githubusercontent.com/Gwendolynops/GwenconnectParticipants/main/staff_sign_in_app_icon_512.png">
-
-  <link rel="apple-touch-icon"
-  href="https://raw.githubusercontent.com/Gwendolynops/GwenconnectParticipants/main/staff_sign_in_app_icon_512.png">
-
-  <link rel="manifest"
-  href="https://gwendolynops.github.io/GwenconnectParticipants/manifest.json">
-
-  <meta name="theme-color" content="#0f2d52">
-
-  <meta name="viewport"
-  content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://gwendolynops.github.io/Portal/staff_sign_in_app_icon_512.png">
+  <link rel="apple-touch-icon" href="https://gwendolynops.github.io/Portal/staff_sign_in_app_icon_512.png">
+  <link rel="manifest" href="https://gwendolynops.github.io/Portal/manifest.json">
+  <meta name="theme-color" content="#62a800">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-
     html, body {
       margin: 0;
       padding: 0;
@@ -29,6 +24,7 @@
     }
 
     iframe {
+      border: none;
       position: fixed;
       inset: 0;
       width: 100%;
@@ -38,23 +34,43 @@
       z-index: 1;
       pointer-events: auto;
     }
-
   </style>
 </head>
 
 <body>
-
   <iframe
     id="appFrame"
     allow="clipboard-read; clipboard-write"
   ></iframe>
 
-  <script>
+<iframe id="appFrame"></iframe>
 
-    let appUrl =
-    "https://script.google.com/macros/s/AKfycbxnPiIN1A5K8jJupCkIG9b2GIuSLO9sPDNuQ73ialQ0E6fqeuUzsdWC-QOJYrO7FLtL/exec";
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const house = params.get("house");
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const house = params.get("house");
+
+  const baseAppUrl = "https://script.google.com/macros/s/AKfycbxnPiIN1A5K8jJupCkIG9b2GIuSLO9sPDNuQ73ialQ0E6fqeuUzsdWC-QOJYrO7FLtL/exec";
+    let appUrl = "https://script.google.com/macros/s/AKfycbxnPiIN1A5K8jJupCkIG9b2GIuSLO9sPDNuQ73ialQ0E6fqeuUzsdWC-QOJYrO7FLtL/exec";
+
+  let finalUrl = baseAppUrl;
+
+  if (house && house.trim() !== "") {
+    finalUrl = baseAppUrl + "?house=" + encodeURIComponent(house.trim());
+  }
+
+  document.getElementById("appFrame").src = finalUrl;
+</script>
+    if (house) {
+      appUrl += "?house=" + encodeURIComponent(house);
+    }
 
     document.getElementById("appFrame").src = appUrl;
+  </script>
+</body>
+</html>
 
   </script>
 
